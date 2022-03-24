@@ -1,0 +1,67 @@
+@use './mixins' as m;
+@use './variables' as v;
+
+nav {
+    @include m.nav-box;
+    background: rgba( 247, 241, 227, 0.25 );
+    box-shadow: 0 2px 8px 0 rgba( 31, 38, 135, 0.20 );
+    backdrop-filter: blur( 4.5px );
+    -webkit-backdrop-filter: blur( 4.5px );
+    @include m.flex-box(space-between, row);
+  
+    @media screen and (max-width:v.$smallScreen) {
+      @include m.nav-for-smallscreens
+    }
+  }
+  
+  .logo {
+    font-weight:bold;
+    font-size:2rem;
+    font-family: v.$fontTwo;
+  }
+  
+  .menu-btn {
+    width:50px;
+    height:50px;
+    @include m.flex-box(center, column);
+    align-items: stretch; //overrides align-items:center in flex-box mixin
+    cursor: pointer;
+  }
+  
+  .menu-btn .open-btn-one {
+    @include m.menu-btn-shape;
+    margin-bottom: 5px;
+  }
+  
+  .menu-btn .open-btn-two {
+    @include m.menu-btn-shape;
+    width:20px; //overrides width:30px; in menu-btn-shape mixin
+  }
+  
+  .menu-btn:hover .open-btn-two{
+    width:30px;
+
+    @media screen and (max-width:v.$smallScreen) {
+      width:20px;
+    }
+  }
+  
+  .close-btn-one {
+    @include m.menu-btn-shape;
+    transform: rotate(-45deg);
+  }
+  
+  .close-btn-two {
+    @include m.menu-btn-shape;
+    transform: rotate(45deg);
+  }
+  
+  .menuIsOpened {
+    @include m.nav-box;
+    background-color:ghostwhite;
+    @include m.flex-box(space-between, row);
+  
+    @media screen and (max-width:v.$smallScreen) {
+        @include m.nav-for-smallscreens;
+    }
+  }

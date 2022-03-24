@@ -1,0 +1,146 @@
+@use './mixins' as m;
+@use './variables' as v;
+
+.about-container .know-me {
+    position:absolute;
+    top:0;
+    color:black;
+    font-family:v.$fontTwo;
+    z-index:-300;
+    top:-12%;
+    left:0;
+    font-size:10rem;
+    opacity:.7;
+    -webkit-text-stroke-width:1px;
+    -webkit-text-fill-color:transparent;
+  
+    @media screen and (max-width:v.$smallScreen) {
+      font-size:5.5rem;
+      opacity:.2;
+      white-space: nowrap;
+      left:-8%;
+    }
+  
+    @media screen and (max-width:320px) {
+      font-size:4rem;
+      left:0;
+    }
+  }
+  
+  .about-container .pin {
+    position:absolute;
+    top:20%;
+    border-radius:50%;
+    right:0%;
+    color:#ffffff;
+    background-color: #2b2b2b;
+    padding:45px 55px;
+    z-index:-300;
+  
+    @media screen and (max-width:v.$smallScreen) {
+      display: none;
+    }
+  }
+  
+  .about-container .about-box {
+    width:600px;
+    height:700px;
+    background: rgba( 247, 241, 227, 0.25 );
+    box-shadow: 0 2px 8px 0 rgba( 31, 38, 135, 0.20 );
+    backdrop-filter: blur( 4px );
+    position:relative;
+    transform:rotate(8deg);
+    transform-origin: top left;
+    animation:dangle 1s alternate infinite;
+  
+    @media screen and (max-width:v.$smallScreen) {
+      width:300px;
+      height:730px;
+      transform: rotate(0deg);
+      animation:none;
+    }
+  }
+  
+  @keyframes dangle {
+    from {
+      transform:rotate(8deg);
+    }
+    to {
+      transform:rotate(0deg);
+    }
+  }
+  
+  .about-box:hover {
+    transform:rotate(0deg);
+    transform-origin: none;
+    animation-play-state: paused;
+  }
+  
+  .about-box:hover .duck-tape-two {
+    display:block;
+  }
+  
+  .about-box .about-me {
+    width:90%;
+    margin:0 auto;
+    @include m.flex-box(center, column);
+  
+    h1 {
+      margin-top:20px;
+      font-size:4rem;
+      -webkit-text-stroke-width:1px;
+      -webkit-text-fill-color:transparent;
+  
+      @media screen and (max-width:v.$smallScreen) {
+        font-size: 3rem;
+        text-align: center;
+      }
+  
+      .black {
+        -webkit-text-fill-color:#000000;
+      }
+    }
+  }
+  
+  .about-me p {
+    color:#2b2b2b;
+    line-height: 30px;
+  }
+  
+  .about-me .mail {
+    background-color:#2b2b2b;
+    color:#ffffff;
+    margin-top: 20px;
+    padding:10px 20px;
+    font-size:1.2rem;
+    transition:all .2s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    @media screen and (max-width: v.$smallScreen) {
+      margin-top:5px;
+    }
+  }
+
+  .sm {
+    margin-top:50px;
+    width:40%;
+    @include m.flex-box(space-around, row);
+
+    @media screen and (max-width:v.$smallScreen) {
+      margin-top:30px;
+    }
+
+    a {
+      color:#2b2b2b;
+      font-size:1.5rem;
+      transition:all .2s ease;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+
+  }

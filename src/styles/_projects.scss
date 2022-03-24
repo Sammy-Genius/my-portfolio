@@ -1,0 +1,402 @@
+@use './mixins' as m;
+@use './variables' as v;
+
+.main-wrapper .projects {
+    width:100%;
+    margin:280px 0;
+    position:relative;
+  
+    @media screen and (max-width:v.$smallScreen) {
+      margin:-70px 0;
+    }
+  }
+  
+  .projects .heading-box {
+    width:95%;
+    margin:0 auto;
+    @include m.flex-box(center,row);
+  
+    .heading {
+      @include m.heading;
+      left:-8%;
+  
+      @media screen and (max-width:v.$smallScreen) {
+        font-size:3rem;
+        left:-8%;
+      }
+
+      @media screen and (max-width:320px) {
+        font-size:2.5rem;
+      }
+
+      @media screen and (min-width:800px) and (max-width: v.$smallScreen) {
+        left:-7%;
+        font-size:7rem;
+    }
+
+    @media screen and (min-width:760px) and (max-width:798px) {
+      font-size:7rem;
+      left:-4rem;
+    }
+  
+      .spacing {
+        @include m.spacing;
+      }
+    }
+  }
+  
+  .project-wrapper {
+    width:100%;
+    margin:190px 0;
+    position:relative;
+    @include m.flex-box(space-evenly, row);
+  
+    @media screen and (max-width:v.$smallScreen) {
+      @include m.flex-box(center, column);
+      margin:70px 0;
+    }
+  }
+  
+  .projects .work-box {
+    width:300px;
+    height:800px;
+    margin:0 auto;
+  
+    @media screen and (max-width:v.$smallScreen) {
+      width:250px;
+      height:400px;
+      margin-bottom:70px;
+    }
+  }
+  
+  .project-one, .project-two, .project-three {
+    position:relative;
+  }
+  
+  .project-one::after {
+   content: '01';
+   top:-12%;
+   @include m.project-card;
+   right:-30.5%;
+   letter-spacing: -21px; //overrides letter-spacing in project-card mixin
+  
+   @media screen and (max-width: v.$smallScreen) {
+     font-size:5rem;
+     right:-19%;
+     letter-spacing:-10px;
+   }
+
+  }
+  
+  .project-two::after {
+   content: '02';
+   @include m.project-card;
+   bottom:48%;
+  
+   @media screen and (max-width: v.$smallScreen) {
+      font-size:5rem;
+      right:-23%;
+      top:-12%;
+      letter-spacing:-6px;
+    }
+  }
+  
+  .project-three::after {
+   content: '03';
+   top:-12%;
+   @include m.project-card;
+  
+   @media screen and (max-width: v.$smallScreen) {
+      font-size:5rem;
+      right:-23%;
+      letter-spacing:-6px;
+    }
+  }
+
+  .project-one::after, .project-two::after, .project-three::after {
+    @media screen and (max-width:320px) {
+      font-size:3rem;
+      letter-spacing:-6px;
+      right:-10.5%;
+      top:-8%;
+    }
+  }
+  
+  
+  .projects .work-box .work{
+    position:relative;
+    width:100%;
+    height:60%;
+    background: rgba( 247, 241, 227, 0.25 );
+    box-shadow: 0 2px 8px 0 rgba( 31, 38, 135, 0.20 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4.5px );
+    @include m.flex-box(center, column);
+  
+    @media screen and (max-width:v.$smallScreen) {
+      height:100%;
+    }
+  }
+  
+  .work img {
+    width:80%;
+    height:80%;
+  }
+  
+  .work .overlay {
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.6);
+    opacity:0;
+    backdrop-filter: blur( 6px );
+    transition:opacity .25s ease-in-out;
+    @include m.flex-box(center, column);
+
+    @media screen and (max-width:1024px) {
+      display:none;
+    }
+  
+    &:hover {
+      opacity:1;
+    }
+  }
+  
+  .overlay h2, p {
+    color:#ffffff;
+    margin-bottom:15px;
+  }
+  
+  .overlay h2 {
+    font-size:2rem;
+  }
+  
+  .overlay p {
+    font-family: v.$fontTwo;
+    font-size:1.7rem;
+    transition-delay: .1s;
+  }
+  
+  .overlay > * {
+    opacity:0;
+    transform:translateY(20px);
+    transition:all .25s ease-in-out;
+  }
+  
+  .overlay:hover > * {
+    opacity:1;
+    transform:translateY(0px);
+  }
+  
+  .link-box {
+    width:50%;
+    transition-delay: .2s;
+    @include m.flex-box(space-around, center);
+  }
+  
+  .icon {
+    font-size:2rem;
+    color:#ffffff;
+    transition: all .15s ease-in-out;
+  
+    &:hover {
+      color:#f7d794;
+    }
+  }
+  
+  .site {
+    color:#ffffff;
+    font-size:1.2rem;
+    transition: all .15s ease-in-out;
+  
+    &:hover {
+      padding-bottom:5px;
+      border-bottom: 2px solid #f7d794;
+    }
+  }
+  
+  .work-box:nth-child(2) {
+    transform:translateY(250px);
+    display:flex;
+    align-items: flex-end;
+  
+    @media screen and (max-width:v.$smallScreen) {
+      transform:translateY(0px);
+    }
+
+  }
+
+  .projects .faded-text-works {
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    @include m.flex-box(flex-start, row);
+    align-items: flex-start;
+    z-index:-300;
+  
+    p {
+      font-size:10rem;
+      color:grey;
+      opacity:.4;
+      margin-top:160px;
+      margin-left:-410px;
+      transform: rotate(-90deg);
+      font-family: v.$fontTwo;
+      -webkit-text-stroke-width:1px;
+      -webkit-text-fill-color:transparent;
+  
+      @media screen and (max-width:v.$smallScreen) {
+       font-size: 6rem;
+       margin-left:-210px;
+        
+      }
+    }
+  }
+
+  //overlay styling for mobile devices
+  .mobile-overlay {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+
+    @media screen and (min-width:1200px) {
+      display:none;
+    }
+
+    .project-links {
+      position:absolute;
+      left:0;
+      top:0;
+      padding:15px 0;
+      width:30%;
+      height:100%;
+      @include m.flex-box(flex-start, column);
+    }
+  }
+
+  .circle-shape {
+    width:40px;
+    height:40px;
+    margin-bottom:15px;
+    border-radius:50%;
+    @include m.flex-box(center, row);
+    box-shadow: 1px 1px 3px #000000;
+  }
+
+  .icon-2 {
+    color:#000000;
+    font-size:1.3rem;
+  }
+
+  .project-details-mobile {
+    position:absolute;
+      right:0;
+      top:0;
+      width:15%;
+      height:100%;
+      @include m.flex-box(center, row);
+    
+
+    p {
+      color:#000000;
+      transform: rotate(-90deg);
+      white-space:nowrap;
+      font-weight:bold;
+    }
+  }
+
+  .shape2 {
+    background: rgba( 247, 241, 227, 0.25 );
+    box-shadow: 0 2px 8px 0 rgba( 31, 38, 135, 0.20 );
+    backdrop-filter: blur( 4.5px );
+    -webkit-backdrop-filter: blur( 4.5px );
+    width:200px;
+    height:200px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    opacity:0.5;
+    z-index:-2000;
+    border-radius:30% 70% 70% 30% / 30% 30% 70% 70%;
+    animation: animate 10s alternate-reverse infinite;
+  }
+  
+  @keyframes animate {
+    from {
+      transform: rotate(0deg);
+      top:50%;
+      left:50%;
+    }
+    to {
+      top:20%;
+      left:20%;
+      transform: rotate(360deg);
+    }
+  }
+  
+  .shape3 {
+    background: rgba( 247, 241, 227, 0.25 );
+    box-shadow: 0 2px 8px 0 rgba( 31, 38, 135, 0.20 );
+    backdrop-filter: blur( 4.5px );
+    -webkit-backdrop-filter: blur( 4.5px );
+    width:100px;
+    height:100px;
+    position: absolute;
+    top:10%;
+    left:0%;
+    opacity:0.5;
+    z-index:-2000;
+    border-radius:18% 82% 47% 53% / 57% 57% 43% 43%;
+    animation: animateTwo 10s alternate-reverse infinite;
+  }
+  
+  @keyframes animateTwo {
+    from {
+      transform: rotate(0deg);
+      top:10%;
+      left:0%;
+    }
+    to {
+      top:40%;
+      left:-10%;
+      transform: rotate(360deg);
+    }
+  }
+
+  .shape4 {
+    background: rgba( 247, 241, 227, 0.25 );
+    box-shadow: 0 2px 8px 0 rgba( 31, 38, 135, 0.20 );
+    backdrop-filter: blur( 4.5px );
+    -webkit-backdrop-filter: blur( 4.5px );
+    width:150px;
+    height:150px;
+    position: absolute;
+    top:10%;
+    right:0%;
+    opacity:0.5;
+    z-index:-2000;
+    border-radius:18% 82% 47% 53% / 57% 57% 43% 43%;
+    animation: animateThree 10s alternate-reverse infinite;
+
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
+  }
+  
+  @keyframes animateThree {
+    from {
+      transform: rotate(0deg);
+      top:10%;
+      right:0%;
+    }
+    to {
+      top:50%;
+      right:-10%;
+      transform: rotate(360deg);
+    }
+  }
+  

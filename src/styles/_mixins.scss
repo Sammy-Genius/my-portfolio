@@ -1,0 +1,61 @@
+@mixin flex-box($justify, $direction) {
+    display:flex;
+    justify-content: $justify;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin nav-box {
+    width:40%;
+    height:80px;
+    border-radius:40px;
+    position:fixed;
+    top:5%;
+    left:30%;
+    right:30%;
+    padding:0 30px;
+    z-index:1000;
+}
+
+@mixin nav-for-smallscreens {
+    width:85%;
+    right:7.5%;
+    left:7.5%;
+    top:3%;
+}
+
+@mixin menu-btn-shape {
+    width:30px;
+    height:3px;
+    background-color: #000000;
+    transition:all .1s ease-in-out;
+}
+
+@mixin project-card {
+    z-index:-30;
+    position:absolute;
+    font-size:10rem;
+    right:-35%;
+    opacity:.5;
+    letter-spacing: -14px;
+    font-family:'Roboto', sans-serif;
+    -webkit-text-stroke-width:1px;
+    -webkit-text-fill-color:transparent;
+}
+
+@mixin heading {
+    font-size: 10rem;
+    position:relative;
+    -webkit-text-stroke-width:1px;
+    -webkit-text-fill-color:transparent;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    color:#000000;
+}
+
+@mixin spacing {
+    position:absolute;
+    top:35%;
+    left:17.5%;
+    -webkit-text-fill-color:#000000;
+}
