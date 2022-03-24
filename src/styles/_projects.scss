@@ -322,7 +322,7 @@
     height:200px;
     position: absolute;
     top:50%;
-    left:50%;
+    left:40%;
     opacity:0.5;
     z-index:-2000;
     border-radius:30% 70% 70% 30% / 30% 30% 70% 70%;
@@ -333,10 +333,10 @@
     from {
       transform: rotate(0deg);
       top:50%;
-      left:50%;
+      left:40%;
     }
     to {
-      top:20%;
+      top:10%;
       left:20%;
       transform: rotate(360deg);
     }
@@ -386,9 +386,6 @@
     border-radius:18% 82% 47% 53% / 57% 57% 43% 43%;
     animation: animateThree 10s alternate-reverse infinite;
 
-    @media screen and (max-width: 600px) {
-      display: none;
-    }
   }
   
   @keyframes animateThree {
@@ -401,6 +398,12 @@
       top:50%;
       right:-10%;
       transform: rotate(360deg);
+    }
+  }
+
+  .shape2, .shape3, .shape4 {
+    @media screen and (max-width: 600px) {
+      display: none;
     }
   }
   
