@@ -41,6 +41,10 @@
   
       .spacing {
         @include m.spacing;
+
+        @media screen and (max-width: v.$smallScreen) {
+          left:16.5%;
+        }
       }
     }
   }

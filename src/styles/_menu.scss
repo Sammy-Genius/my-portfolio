@@ -75,12 +75,21 @@
 .menu-bg ul:hover li {
     filter: blur(1.2px);
     opacity: 0.5;
+
+    @media screen and (max-width:v.$smallScreen) {
+        filter: blur(0px);
+        opacity: 1;
+    }
 }
 
 .menu-bg ul li:hover {
     filter: blur(0px);
     opacity: 1;
     transform: scale(1.2);
+
+    @media screen and (max-width:v.$smallScreen) {
+        transform: scale(1);
+    }
 }
 
 
