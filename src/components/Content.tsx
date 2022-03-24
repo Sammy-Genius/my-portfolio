@@ -143,7 +143,7 @@ export const Main = () => {
                 </div>
             </div>
         </div>
-        <footer>
+        <footer id='contact'>
             <div className="sm-contacts">
                 <a href="mailto: mrsammadeit@gmail.com"><FontAwesomeIcon icon={ faAt } /></a>
                 <a href="https://github.com/Sammy-Genius?tab=repositories"><FontAwesomeIcon icon={ faGithub } /></a>

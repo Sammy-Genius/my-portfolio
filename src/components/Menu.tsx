@@ -85,6 +85,7 @@ export const Menu = ({ menu, showMenu }: IProps) => {
                 <li onClick={ showMenu }><a href="#about-me">About Me</a></li>
                 <li onClick={ showMenu }><a href="#projects">My Work</a></li>
                 <li onClick={ showMenu }><a href="#my-skills">My Skills</a></li>
+                <li onClick={ showMenu }><a href="#contact">Contact Me</a></li>
               </motion.ul>
             </motion.div>
           </motion.div>
