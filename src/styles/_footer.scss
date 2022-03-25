@@ -54,6 +54,11 @@ footer {
       @media screen and (max-width:v.$smallScreen) {
         transform: scale(1.25);
       }
+
+      @media screen and (max-width:320px) {
+        transform: scale(1.2);
+        font-size:2rem;
+      }
     }
   }
   

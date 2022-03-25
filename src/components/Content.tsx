@@ -116,9 +116,6 @@ export const Main = () => {
                         <p>Check out my work</p>
                     </div>
                 </div>
-                <div className="shape2"></div>
-                <div className="shape3"></div>
-                <div className="shape4"></div>
             </div>
             <div className="skills-wrapper" id='my-skills'>
                 <div className="heading-box">

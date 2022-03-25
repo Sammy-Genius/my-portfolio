@@ -35,6 +35,7 @@
       @media screen and (max-width:320px) {
         font-size:2.5rem;
         left:-20%;
+        letter-spacing: 7px;
       }
 
     @media screen and (min-width:768px) and (max-width:1024px) {
@@ -52,7 +53,7 @@
         left:60.5%;//overrides left in spacing mixin
 
         @media screen and (max-width:v.$smallScreen) {
-          left:50%;
+          left:47%;
         }
       }
   

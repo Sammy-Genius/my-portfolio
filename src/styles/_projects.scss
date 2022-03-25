@@ -23,11 +23,12 @@
   
       @media screen and (max-width:v.$smallScreen) {
         font-size:3.2rem;
-        left:-8%;
+        left:-7%;
       }
 
       @media screen and (max-width:320px) {
         font-size:2.5rem;
+        letter-spacing: 5px;
       }
 
       @media screen and (min-width:800px) and (max-width: v.$smallScreen) {
@@ -44,7 +45,7 @@
         @include m.spacing;
 
         @media screen and (max-width: v.$smallScreen) {
-          left:18.5%; //overrides left in spacing mixin
+          left:18.3%; //overrides left in spacing mixin
         }
       }
     }
@@ -240,6 +241,10 @@
     @include m.flex-box(flex-start, row);
     align-items: flex-start;
     z-index:-300;
+
+    @media screen and (max-width:320px) {
+      display:none;
+    }
   
     p {
       font-size:10rem;
@@ -314,97 +319,5 @@
     }
   }
 
-  .shape2 {
-    background: rgba( 245, 246, 250, 0.25 );
-    box-shadow: 0 2px 8px 0 rgba( 31, 38, 135, 0.20 );
-    backdrop-filter: blur( 4.5px );
-    -webkit-backdrop-filter: blur( 4.5px );
-    width:200px;
-    height:200px;
-    position: absolute;
-    top:50%;
-    left:40%;
-    opacity:0.5;
-    z-index:-2000;
-    border-radius:30% 70% 70% 30% / 30% 30% 70% 70%;
-    animation: animate 10s alternate-reverse infinite;
-  }
   
-  @keyframes animate {
-    from {
-      transform: rotate(0deg);
-      top:50%;
-      left:40%;
-    }
-    to {
-      top:10%;
-      left:20%;
-      transform: rotate(360deg);
-    }
-  }
-  
-  .shape3 {
-    background: rgba( 245, 246, 250, 0.25 );
-    box-shadow: 0 2px 8px 0 rgba( 31, 38, 135, 0.20 );
-    backdrop-filter: blur( 4.5px );
-    -webkit-backdrop-filter: blur( 4.5px );
-    width:100px;
-    height:100px;
-    position: absolute;
-    top:10%;
-    left:0%;
-    opacity:0.5;
-    z-index:-2000;
-    border-radius:18% 82% 47% 53% / 57% 57% 43% 43%;
-    animation: animateTwo 10s alternate-reverse infinite;
-  }
-  
-  @keyframes animateTwo {
-    from {
-      transform: rotate(0deg);
-      top:10%;
-      left:0%;
-    }
-    to {
-      top:40%;
-      left:-10%;
-      transform: rotate(360deg);
-    }
-  }
-
-  .shape4 {
-    background: rgba( 245, 246, 250, 0.25 );
-    box-shadow: 0 2px 8px 0 rgba( 31, 38, 135, 0.20 );
-    backdrop-filter: blur( 4.5px );
-    -webkit-backdrop-filter: blur( 4.5px );
-    width:150px;
-    height:150px;
-    position: absolute;
-    top:10%;
-    right:0%;
-    opacity:0.5;
-    z-index:-2000;
-    border-radius:18% 82% 47% 53% / 57% 57% 43% 43%;
-    animation: animateThree 10s alternate-reverse infinite;
-
-  }
-  
-  @keyframes animateThree {
-    from {
-      transform: rotate(0deg);
-      top:10%;
-      right:0%;
-    }
-    to {
-      top:50%;
-      right:-10%;
-      transform: rotate(360deg);
-    }
-  }
-
-  .shape2, .shape3, .shape4 {
-    @media screen and (max-width: 600px) {
-      display: none;
-    }
-  }
   

@@ -52,10 +52,13 @@
     animation:dangle 1s alternate infinite;
   
     @media screen and (max-width:v.$smallScreen) {
-      width:300px;
-      height:730px;
+      width:320px;
       transform: rotate(0deg);
       animation:none;
+    }
+
+    @media screen and (max-width:320px) {
+      width:300px;
     }
   }
   
@@ -93,6 +96,7 @@
       @media screen and (max-width:v.$smallScreen) {
         font-size: 3rem;
         text-align: center;
+        white-space: normal;
       }
   
       .black {
@@ -104,6 +108,7 @@
   .about-me p {
     color:#2b2b2b;
     line-height: 30px;
+    text-align: center;
   }
   
   .about-me .mail {
