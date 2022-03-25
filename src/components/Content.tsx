@@ -2,13 +2,14 @@ import { faCss3, faGithub, faHtml5, faJs, faLinkedin, faReact, faSass, faTwitter
 import { faAt, faEye } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react'; 
+import { motion } from 'framer-motion';
 
 export const Main = () => {
   return (
     <div className='content'>
         <div className="main-wrapper">
-            <h1><span className='right'>I bring designs to life &</span> <br /> paint&#127912; beautiful experiences <br /> on the web with <span className='orange'>code();</span></h1>
-            <a className = "view-projects"  href="#projects">View my work</a>
+            <motion.h1 initial = {{ opacity: 0, y:-50}} animate = {{opacity:1, y:0}} transition = {{ duration: .6}}><span className='right'>I bring designs to life &</span> <br /> paint&#127912; beautiful experiences <br /> on the web with <span className='orange'>code();</span></motion.h1>
+            <motion.a initial = {{ opacity: 0, y:50}} animate = {{opacity:1, y:0}} transition = {{ duration: .6, delay:.2}} className = "view-projects"  href="#projects">View my work</motion.a>
             <div className="about-container" id='about-me'>
                 <div className="about-box">
                     <div className="about-me">
