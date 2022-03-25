@@ -127,10 +127,6 @@ li {
   z-index:-100;
   @include m.flex-box(center, row);
 
-    /*@media screen and (max-width: v.$smallScreen) {
-      position:fixed;
-    }*/
-
   img {
       background: no-repeat;
       width:500px;
