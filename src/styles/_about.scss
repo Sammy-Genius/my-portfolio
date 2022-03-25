@@ -16,12 +16,13 @@
     -webkit-text-fill-color:transparent;
   
     @media screen and (max-width:v.$smallScreen) {
-      font-size:5.5rem;
+      /*font-size:5.5rem;
       opacity:.2;
       white-space: nowrap;
       top:20%;
       left:-55%;
-      transform: rotate(-90deg);
+      transform: rotate(-90deg);*/
+      display: none;
     }
   
     @media screen and (max-width:320px) {
