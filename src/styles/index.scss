@@ -127,9 +127,9 @@ li {
   z-index:-100;
   @include m.flex-box(center, row);
 
-  @media screen and (max-width: v.$smallScreen) {
-    position:fixed;
-}
+    /*@media screen and (max-width: v.$smallScreen) {
+      position:fixed;
+    }*/
 
   img {
       background: no-repeat;
@@ -300,8 +300,8 @@ li {
   transform:rotate(50deg);
   display:none;
 
-  @media screen and (max-width:v.$smallScreen) {
+  /*@media screen and (max-width:v.$smallScreen) {
     display:block;
-  }
+  }*/
 }
 

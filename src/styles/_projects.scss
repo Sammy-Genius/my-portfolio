@@ -18,10 +18,11 @@
   
     .heading {
       @include m.heading;
+      letter-spacing: 10px;
       left:-8%;
   
       @media screen and (max-width:v.$smallScreen) {
-        font-size:3rem;
+        font-size:3.2rem;
         left:-8%;
       }
 
@@ -43,7 +44,7 @@
         @include m.spacing;
 
         @media screen and (max-width: v.$smallScreen) {
-          left:16.5%; //overrides left in spacing mixin
+          left:18.5%; //overrides left in spacing mixin
         }
       }
     }

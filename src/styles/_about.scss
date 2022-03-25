@@ -16,12 +16,6 @@
     -webkit-text-fill-color:transparent;
   
     @media screen and (max-width:v.$smallScreen) {
-      /*font-size:5.5rem;
-      opacity:.2;
-      white-space: nowrap;
-      top:20%;
-      left:-55%;
-      transform: rotate(-90deg);*/
       display: none;
     }
   
@@ -92,6 +86,7 @@
     h1 {
       margin-top:20px;
       font-size:4rem;
+      white-space: nowrap;
       -webkit-text-stroke-width:1px;
       -webkit-text-fill-color:transparent;
   

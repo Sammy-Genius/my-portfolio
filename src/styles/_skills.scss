@@ -25,9 +25,10 @@
     .heading {
       @include m.heading;
       left:-21%;
+      letter-spacing: 10px;
   
       @media screen and (max-width:v.$smallScreen) {
-        font-size:3rem;
+        font-size:3.2rem;
         left:-19%;
       }
 
