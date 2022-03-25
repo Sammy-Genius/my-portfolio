@@ -46,7 +46,7 @@
         @include m.spacing;
 
         @media screen and (max-width: v.$smallScreen) {
-          left:20.8%; //overrides left in spacing mixin
+          left:15%; //overrides left in spacing mixin
         }
       }
     }
