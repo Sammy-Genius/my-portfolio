@@ -79,6 +79,10 @@
   
   .about-box:hover .duck-tape-two {
     display:block;
+
+    @media screen and (max-width:v.$smallScreen) {
+      display:none;
+    }
   }
   
   .about-box .about-me {
