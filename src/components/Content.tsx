@@ -14,8 +14,7 @@ export const Main = () => {
                 <div className="about-box">
                     <div className="about-me">
                         <h1>WHO IS <span className='black'>SAMUEL?</span></h1>
-                        <p>I'm a frontend web developer with experience in building interactive, responsive and pixel-
-                        perfect user interfaces. I'm experienced in replicating design mockups with great attention to
+                        <p>I'm a frontend web developer with experience in building interactive, responsive and pixel-perfect user interfaces. I'm experienced in replicating design mockups with great attention to
                         detail.</p>
                         <p>I'm currently looking for an opportunity to work with a team of creative developers and designers. I'm available for internships/entry level roles/gigs.</p>
                         <a className="mail" href="mailto: mrsammadeit@gmail.com">Hit me up</a>
